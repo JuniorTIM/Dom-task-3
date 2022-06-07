@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>интукод</title>
+  </head>
+  <body>
+    <div id="main">
+      <ul id="list">
+        <li>html</li>
+        <li>css</li>
+      </ul>
+    </div>
+    <div id="copyright">(c) INTOCODE</div>
+    <script>
+      const title = () => {
+        const h1 = document.createElement("h1");
+        h1.textContent = "Работа с DOM";
+        document.body.prepend(h1);
+        return "Заголовок добавлен";
+      };
+
+      console.log(title("h1"));
+
+      const addLink = () => {
+        const main = document.getElementById("main");
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = "https://learn.javascript.ru/ui";
+        a.textContent = "Статья о DOM";
+        main.append(a);
+        return "Статья добавлена";
+      };
+
+      console.log(addLink());
+
+      const changeColor = (color) => {
+        document.body.style.backgroundColor = color;
+        return "цвет изменен";
+      };
+
+      console.log(changeColor("red"));
+
+      const addLi = (tex) => {
+        const list = document.getElementById("list");
+        const li = document.createElement("li");
+        li.textContent = tex;
+        list.append(li);
+        return "Текст добавлен";
+      };
+
+      console.log(addLi("lorem ipsum sdmvioshosndvslkv"));
+
+      const deleteBlock = () => {
+          const copyright = document.getElementById("copyright")
+          copyright.remove()
+          return "Блок удален"
+      }
+
+      console.log(deleteBlock())
+    </script>
+  </body>
+</html>
